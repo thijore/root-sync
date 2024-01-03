@@ -1,0 +1,20 @@
+apiVersion: configsync.gke.io/v1alpha1
+kind: RepoSync
+metadata:
+  name: repo-sync
+  namespace: ns-sync-hdfc-demo
+  annotations:
+    configmanagement.gke.io/cluster-selector: dev-clusters
+#    configsync.gke.io/cluster-name-selector: docker-desktop
+spec:
+  override:
+    enableShellInRendering: true
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/darshanbm099/ns-sync-hdfc-demo.git
+    branch: dev
+    dir: application-namespace-config/ns-sync-hdfc-demo/deployment-manifests/deploy/
+    auth: token
+    secretRef:
+      name: github-dbm

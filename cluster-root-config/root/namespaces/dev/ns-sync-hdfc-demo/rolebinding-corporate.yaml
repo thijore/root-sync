@@ -1,0 +1,22 @@
+kind: RoleBinding
+apiVersion: rbac.authorization.k8s.io/v1
+metadata:
+  name: syncs-repo
+  namespace: ns-sync-hdfc-demo
+  annotations:
+    configmanagement.gke.io/cluster-selector: dev-clusters
+#    configsync.gke.io/cluster-name-selector: docker-desktop
+subjects:
+- kind: ServiceAccount
+  name: ns-reconciler-ns-sync-hdfc-demo
+  namespace: config-management-system
+
+roleRef:
+  kind: ClusterRole
+  name: cluster-admin
+  apiGroup: rbac.authorization.k8s.io
+#roleRef:
+  #kind: ClusterRole
+  #name: istio-ns-admin-role
+  #apiGroup: rbac.authorization.k8s.io
+
