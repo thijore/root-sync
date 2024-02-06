@@ -6,6 +6,6 @@ metadata:
   annotations:
     configmanagement.gke.io/cluster-selector: dev-clusters
 #    configsync.gke.io/cluster-name-selector: docker-desktop
-  labels:
-    # istio-injection: enabled
-    istio.io/rev: stable
+  # labels:
+  #   # istio-injection: enabled
+  #   istio.io/rev: stable
