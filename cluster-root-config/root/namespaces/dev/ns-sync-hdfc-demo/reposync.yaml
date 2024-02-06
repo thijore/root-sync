@@ -4,8 +4,8 @@ metadata:
   name: repo-sync
   namespace: ns-sync-hdfc-demo
   annotations:
-    configmanagement.gke.io/cluster-selector: dev-clusters
-#    configsync.gke.io/cluster-name-selector: docker-desktop
+    # configmanagement.gke.io/cluster-selector: dev-clusters
+    configsync.gke.io/cluster-name-selector: docker-desktop
 spec:
   override:
     enableShellInRendering: true
