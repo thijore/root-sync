@@ -14,7 +14,7 @@ spec:
   git:
     repo: https://github.com/darshanbm099/ns-sync-hdfc-demo.git
     branch: dev
-    dir: application-namespace-config/ns-sync-hdfc-demo/deployment-manifests/deploy/
+    dir: application-namespace-config/ns-sync-hdfc-demo/deployment-manifests/deploy
     auth: token
     secretRef:
       name: github-dbm
