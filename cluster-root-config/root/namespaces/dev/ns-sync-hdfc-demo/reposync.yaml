@@ -13,7 +13,7 @@ spec:
   sourceFormat: unstructured
   git:
     repo: https://github.com/darshanbm099/ns-sync-hdfc-demo.git
-    branch: dev
+    branch: main
     dir: application-namespace-config/ns-sync-hdfc-demo/deployment-manifests/deploy/
     auth: token
     secretRef:
