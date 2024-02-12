@@ -1,0 +1,9 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ConfigManagement
+metadata:
+  name: config-management
+spec:
+   clusterName: docker-desktop
+  # The `enableMultiRepo` field is set to true to enable RootSync and RepoSync APIs.
+   enableMultiRepo: true
+   preventDrift: true
