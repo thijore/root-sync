@@ -1,0 +1,20 @@
+config-sync installation runbook
+
+Pre-requisites
+Ensure you have installed awscli, kubectl, gcloud (gsutil) on your Workstation (Jump Server).
+
+ConfigSync Installation
+Download and Deploy the Config Sync Operator
+this will download all gsutil below
+#gsutil cp gs://config-management-release/released/latest/config-management-operator.yaml config-management-operator.yaml
+
+#kubectl apply -f config-management-operator.yaml
+#kubectl apply -f config-management.yaml
+#kubectl apply -f config-management-multi-repo.yaml
+#kubectl apply -f rootsync.yaml
+
+-----------------------------------------------------
+kubectl create secret generic git-creds-sidgs-bbt  --namespace=config-management-system --from-literal=username=thijore --from-literal="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"
+
+#check ns-reconciler-ns-sync-hdfc-demo   pod is created once rootsync.yaml deploy
+-------------------------------------------------------------------------------
