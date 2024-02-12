@@ -1,1 +1,16 @@
-
+apiVersion: configsync.gke.io/v1beta1
+kind: RootSync
+metadata:
+  name: root-sync
+  namespace: config-management-system
+spec:
+  sourceType: git
+  sourceFormat: unstructured
+  git:
+    repo: https://github.com/thijore/root-sync.git
+    branch: main
+    dir: cluster-root-config/root
+    auth: token
+    period: 5s
+    secretRef:
+      name: github-dbm
